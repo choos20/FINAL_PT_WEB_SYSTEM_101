@@ -1,0 +1,199 @@
+/* ============================================
+   Donate Page Styles with Gradient Background
+   ============================================ */
+
+/* 🌈 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌟 Body with gradient background */
+body {
+  background: linear-gradient(-45deg, #1a1a1a, #41456c, #4a4e69, #02635a);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌟 Headers */
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 50px 50px 10px 50px;
+  text-shadow: 0 0 15px greenyellow;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 10px greenyellow;
+  margin: 2px 50px 30px 50px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h1:hover, h3:hover {
+  color: rgb(50, 255, 120); 
+  text-shadow: 0 0 20px greenyellow, 0 0 30px pink; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
+}
+
+/* 🌟 Main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+/* 💬 Donation Boxes */
+.donate-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.donate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.5), 0 0 40px rgba(56, 248, 63, 0.3);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(50, 255, 120, 0.6), 0 0 45px rgba(56, 248, 63, 0.4);
+}
+
+.donate-box h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.account {
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 15px 0 0 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* QR Image */
+
+.qr {
+  width: 380px;
+  height: 180px;
+  border-radius: 12px;
+  margin-bottom: 15px; /* ensures number is below */
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gcash-qr {
+  width: 250px !important;
+  height: 250px !important;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.qr:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(50, 255, 120, 0.7), inset 0 0 15px rgba(186, 253, 108, 0.6);
+}
+
+/* 💛 Thank You text */
+.thank-you {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+  font-size: 20px;
+}
+
+/* 🔹 Back Button */
+#back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgb(50, 255, 120);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(50, 255, 120, 0.7);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+#back-button:hover {
+  background-color: rgb(227, 76, 175);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(227, 76, 175, 0.7);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin: 30px 20px 15px 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 2px 20px 20px 20px;
+  }
+
+  .donate-box {
+    padding: 20px;
+  }
+
+  .account {
+    font-size: 16px;
+  }
+
+  .thank-you {
+    font-size: 18px;
+  }
+}

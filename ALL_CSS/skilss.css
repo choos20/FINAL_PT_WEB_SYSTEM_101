@@ -1,0 +1,23 @@
+.skills-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.skill-btn {
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #ff9900;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff9900;
+  transition: all 0.3s ease;
+}
+
+.skill-btn:hover {
+  background-color: #32cd32;
+  box-shadow: 0 0 20px #32cd32;
+}

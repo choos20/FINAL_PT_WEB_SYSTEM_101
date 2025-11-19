@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate</title>
+  <link rel="stylesheet" href="../ALL_CSS/donate.css">
+</head>
+<body>
+  <main>
+    <h1>Support Me</h1>
+    
+    <section class="donate-section">
+      <!-- GCash -->
+    <!-- GCash -->
+<div class="donate-box">
+  <h2>GCash</h2>
+  <p>Send your donation to:</p>
+  <img src="../images/GCCC.jpg" alt="GCash QR Code" class="qr gcash-qr">
+  <p class="account">📱 <strong>09947610655</strong></p>
+</div>
+
+      <!-- Bank Transfer -->
+      <div class="donate-box">
+        <h2>Bank Transfer</h2>
+        <p>Bank: <strong>LANDBANK OF THE PHILIPPINES</strong></p>
+        <img src="../images/LB.jpg" alt="Bank QR Code" class="qr">
+        <p class="account">🏦 <strong>SA 5887 0200 37</strong></p>
+      </div>
+
+      <!-- Cebuana Remittance -->
+      <div class="donate-box">
+        <h2>Cebuana Remittance</h2>
+        <img src="../images/CB.jpg" alt="Cebuana QR Code" class="qr">
+        <p class="account">💵 <strong>629115 0620613367269</strong></p>
+      </div>
+    </section>
+
+    <p class="thank-you">💛 Thank you for supporting ME!
+
+  <!-- Back Button -->
+  <a href="new.html" id="back-button">
+    ← Back
+  </a>
+
+  <script>
+    const backBtn = document.getElementById('back-button');
+    backBtn.addEventListener('mouseenter', () => {
+      backBtn.style.backgroundColor = 'rgb(227, 76, 175)';
+      backBtn.style.color = 'white';
+    });
+    backBtn.addEventListener('mouseleave', () => {
+      backBtn.style.backgroundColor = 'rgb(50, 255, 120)';
+      backBtn.style.color = 'black';
+    });
+  </script>
+</body>
+</html>

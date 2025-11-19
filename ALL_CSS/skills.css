@@ -1,0 +1,319 @@
+/* ============================================
+   Donate Page Styles with Gradient Background
+   ============================================ */
+
+/* 🌈 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌟 Body with gradient background */
+body {
+  background: linear-gradient(-45deg, #1a1a1a, #41456c, #4a4e69, #02635a);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌟 Headers */
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 50px 50px 10px 50px;
+  text-shadow: 0 0 15px greenyellow;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 10px greenyellow;
+  margin: 2px 50px 30px 50px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h1:hover, h3:hover {
+  color: rgb(50, 255, 120); 
+  text-shadow: 0 0 20px greenyellow, 0 0 30px pink; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
+}
+
+/* 🌟 Main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+body::after {
+  background: radial-gradient(circle at center, #8a2be2, transparent 60%),
+              radial-gradient(circle at top right, #ff4500, transparent 60%);
+  z-index: -2;
+  opacity: 0.3;
+  animation-delay: 2s;
+}
+
+@keyframes floatBackground {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, -20px) scale(1.05); }
+}
+
+/* ==== Skills Section ==== */
+.skills-section {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.skills-section h2 {
+  font-size: 3rem;
+  color: #ff9900;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* ==== Skills List ==== */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==== Skill Card ==== */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(26, 26, 26, 0.85);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 153, 0, 0.7), 0 0 40px rgba(50, 255, 120, 0.5);
+}
+
+/* ==== Skill Icon ==== */
+.skill i {
+  font-size: 50px;
+  color: #ff9900;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.skill:hover i {
+  color: #32cd32;
+}
+
+/* ==== Skill Name ==== */
+.skill h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ==== Progress Bar ==== */
+.progress-bar {
+  background-color: #333;
+  border-radius: 12px;
+  width: 100%;
+  height: 18px;
+  overflow: hidden;
+}
+.progress {
+  animation: none !important;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #32cd32, #00ffea);
+  width: 0%;
+  animation: fillProgress 2s forwards;
+}
+/* ==== Progress Fill ==== */
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ff9900, #32cd32);
+  border-radius: 12px;
+  transition: width 0.5s ease-in-out;
+}
+
+@keyframes fillProgress {
+  to { width: var(--progress-width); }
+}
+
+/* ==== Media Queries ==== */
+@media screen and (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .skill h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill i {
+    font-size: 40px;
+  }
+}
+.progress {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #32cd32, #00ffea);
+  width: 0%;
+  animation: fillProgress 2s forwards;
+}
+
+@keyframes fillProgress {
+  to { width: var(--progress-width); }
+}
+
+/* ==== Skills Buttons Section ==== */
+.skills-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.skill-btn {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #ff9900, #32cd32);
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.6), 0 0 25px rgba(50, 205, 50, 0.6);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.skill-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(45deg, #32cd32, #00ffea);
+  box-shadow: 0 0 25px rgba(50, 205, 50, 0.8), 0 0 35px rgba(0, 255, 234, 0.8);
+  color: #fff;
+}
+
+.skill-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.6), 0 0 20px rgba(0, 255, 234, 0.6);
+}
+.skill-btn i {
+  margin-right: 10px;
+  font-size: 22px;
+  vertical-align: middle;
+  text-shadow: 0 0 10px greenyellow;
+  transition: all 0.3s ease;
+}
+
+.skill-btn:hover i {
+  transform: scale(1.15);
+  color: #00ffee;
+}
+
+/* ===== Glowing Divider Line ===== */
+.glow-divider {
+  width: 80%;
+  height: 4px;
+  margin: 60px auto;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff9900, #32cd32, #00ffee);
+  animation: dividerGlow 3s infinite alternate;
+}
+
+@keyframes dividerGlow {
+  0% { box-shadow: 0 0 15px #ff9900; }
+}
+/* ==== Glass Description Boxes ==== */
+.skills-description {
+  margin: 60px auto;
+  padding: 60px 40px;       /* Extra padding for height */
+  min-height: 300px;        /* Ensure enough space for icons + text */
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.4),
+              0 0 30px rgba(50, 255, 120, 0.3);
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+  overflow: visible;         /* Allow icons to move slightly outside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Floating icons inside the box */
+.floating-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;  /* Space between icons and heading */
+}
+
+.floating-icons i {
+  font-size: 40px;           /* Make icons bigger */
+  color: #ff9900;
+  opacity: 0.85;
+  animation: floatIcon 3s infinite ease-in-out;
+}
+
+.floating-icons i:nth-child(2) { animation-delay: 0.6s; }
+.floating-icons i:nth-child(3) { animation-delay: 1.2s; }
+
+@keyframes floatIcon {
+  0% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-12px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.7; }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.skills-description p {
+  font-size: 1.2rem;   /* Adjust this value as needed */
+  line-height: 1.6;    /* Makes text easier to read */
+  color: #ffffff;      /* Optional: ensure it stands out */
+  margin-top: 20px;    /* Optional: spacing from heading */
+  text-align: center;  /* Keeps text centered inside the glass box */
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soft Skills</title>
+
+  <!-- Font Awesome Icons (required) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="../ALL_CSS/skills.css" />
+</head>
+<body>
+
+  <div class="skills-section">
+    <h2>Soft Skills</h2>
+
+    <div class="skills-list">
+
+      <div class="skill">
+        <i class="fas fa-comments"></i>
+        <h3>Communication</h3>
+      </div>
+
+      <div class="skill">
+        <i class="fas fa-users"></i>
+        <h3>Teamwork</h3>
+      </div>
+
+      <div class="skill">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Problem Solving</h3>
+      </div>
+
+      <div class="skill">
+        <i class="fas fa-brain"></i>
+        <h3>Critical Thinking</h3>
+      </div>
+
+      <div class="skill">
+        <i class="fas fa-stopwatch"></i>
+        <h3>Time Management</h3>
+      </div>
+<div class="skill">
+        <i class="fas fa-fire"></i>
+        <h3>Ability to work under pressure</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <a href="skills.html" id="back-button" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(50, 255, 120);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(50, 255, 120, 0.7);
+    transition: all 0.3s ease;
+  ">
+    ← Back
+  </a>
+
+  <script>
+    const backBtn = document.getElementById('back-button');
+    backBtn.addEventListener('mouseenter', () => {
+      backBtn.style.backgroundColor = 'rgb(227, 76, 175)';
+      backBtn.style.color = 'white';
+    });
+    backBtn.addEventListener('mouseleave', () => {
+      backBtn.style.backgroundColor = 'rgb(50, 255, 120)';
+      backBtn.style.color = 'black';
+    });
+  </script>
+
+</body>
+</html>

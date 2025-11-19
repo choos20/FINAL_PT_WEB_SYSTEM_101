@@ -1,0 +1,178 @@
+/* ============================================
+   Donate Page Styles with Gradient Background
+   ============================================ */
+
+/* 🌈 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌟 Body with gradient background */
+body {
+  background: linear-gradient(-45deg, #1a1a1a, #41456c, #4a4e69, #02635a);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌟 Headers */
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 50px 50px 10px 50px;
+  text-shadow: 0 0 15px greenyellow;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 10px greenyellow;
+  margin: 2px 50px 30px 50px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h1:hover, h3:hover {
+  color: rgb(50, 255, 120); 
+  text-shadow: 0 0 20px greenyellow, 0 0 30px pink; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
+}
+
+/* 🌟 Main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+/* ==== Page Title ==== */
+h1 {
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #ffd369;
+  text-shadow: 0 0 15px rgba(255, 211, 105, 0.8);
+  animation: fadeInDown 1s ease;
+}
+
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   CUSTOM BUTTONS (Favorites homepage only)
+   ============================================ */
+
+.favorites-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.fav-btn {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: #3a86ff;
+  border-radius: 14px;
+  width: 80%;
+  max-width: 380px;
+  box-shadow: 0 6px 15px rgba(58, 134, 255, 0.35);
+  transition: all 0.3s ease-in-out;
+}
+
+.fav-btn:hover {
+  background: #ff006e;
+  box-shadow: 
+      0 0 15px #ff006e,
+      0 0 25px rgba(58, 134, 255, 0.7);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* ============================================
+   GRID FOR IMAGES ON ANIME / MUSIC / SPORTS
+   ============================================ */
+
+/* Grid wrapper */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  animation: fadeInUp 1.1s ease;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   FIXED UNIFORM IMAGE CARDS - RECTANGLE
+   ============================================ */
+
+/* Card container */
+.img-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.img-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 0, 110, 0.5);
+}
+
+/* Rectangular Images */
+.img-card img {
+  width: 100%;         /* full width of card */
+  height: 300px;       /* rectangle height, adjust as needed */
+  object-fit: cover;   /* keeps aspect ratio and fills rectangle */
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.img-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Image title */
+.img-title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #ffd369;
+  text-shadow: 0 0 8px rgba(255, 211, 105, 0.7);
+}
